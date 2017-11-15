@@ -1,0 +1,20 @@
+.pad{
+	padding:10px;
+}
+
+.kiri{
+	margin-left: 10px;
+}
+
+#copyright {
+	color: #555;
+	text-align: center;
+}
+
+th, tr, td{
+	text-align: center;
+}
+
+.progress-bar-danger {
+	background-color: #D5220F;
+}
