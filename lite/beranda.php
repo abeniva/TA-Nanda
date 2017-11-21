@@ -25,12 +25,19 @@
                                     <div class="text-justify">
                                         <?php
                                             if (ISSET($_GET['balasan']) AND ($_GET['balasan']==1)) {
-                                            echo '<div class="alert alert-dismissible alert-success"><button type="button" class="close" data-dismiss="alert">&times;</button><span class="glyphicon glyphicon-ok"></span> Perhitungan efisiensi berhasil</div>';
+                                            echo '<div class="alert alert-dismissible alert-success"><button type="button" class="close" data-dismiss="alert">&times;</button><span class="glyphicon glyphicon-ok"></span> Perhitungan berhasil</div>';
                                             }
                                         ?>
                                         <h3 class="card-title text-center">SELAMAT DATANG</h3>
-                                        <h2 class="card-subtitle text-center">Sistem Evaluasi Tenaga Kependidikan dan Non Kependidikan</h2>
-                                        <p>Penyelenggaraan satu sistem pendidikan nasional diamanatkan untuk Pemerintah melalui Undang-Undang Dasar 1945 dan telah diatur dengan undang-undang. Undang-undang yang dimaksud adalah Undang-Undang No.2 / 1989 tentang Sistem Pendidikan Nasional, Undang-Undang No.20 / 2003, dan Undang-Undang No.12 / 2012 tentang Pendidikan Tinggi. BAN-PT merupakan lembaga non-struktural di bawah Menteri Pendidikan dan Kebudayaan yang menunjang penyelenggaraan perguruan tinggi guna pembinaan penyelenggaraan perguruan tinggi, melayani kepentingan masyarakat, dan kemajuan ilmu pengetahuan dan teknologi untuk meningkatkan taraf kehidupan masyarakat serta memperkaya kebudayaan nasional (BAN-PT, 2014). BAN-PT memiliki sebelas tugas dan wewenang berdasarkan Peraturan Menteri Riset, Teknologi, dan Pendidikan Tinggi Nomor 32 tahun 2016 salah satunya adalah melakukan akreditasi Perguruan Tinggi.</p>
+                                        <h2 class="card-title text-center">Sistem Evaluasi Tenaga Kependidikan dan Non Kependidikan</h2>
+                                        <h4 id="deskripsi">Sistem Evaluasi Tenaga Kependidikan dan Non Kependidikan merupakan sebuah sistem yang berfungsi untuk menghitung efisiensi kinerja departemen serta menentukan departemen yang terbaik. 
+                                        <em>Output</em> dari sistem ini yaitu :
+                                        <ul>
+                                        	<li>Mendapatkan nilai efisiensi departemen</li>
+                                        	<li>Mendapatkan rekomendasi untuk departemen belum efisien</li>
+                                        	<li>Mendapatkan perangkingan dari departemen yang efisien</li>
+                                        </ul>
+                                        Departemen yang sudah efisien akan menjadi <em>benchmarking</em> bagi departemen lain yang belum efisien melalui rekomendasi yang dihasilkan. Sistem ini dibuat guna membantu pihak departemen dalam mengambil keputusan sebagai upaya dalam meningkatkan kinerja departemen.</h4>
                                     </div>
                                 </div>
                             </div>

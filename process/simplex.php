@@ -2,10 +2,10 @@
 	include '../process/db_login.php';
 	session_start();
 	
-	// Mengosongkan data pada tabel perhitungan efisiensi
-	$qdelete = mysqli_query($conn, 'DELETE FROM perhitungan_efisiensi');
+	// Mengosongkan data
+	$hapus = mysqli_query($conn, 'DELETE FROM perhitungan_efisiensi');
 
-	// Pilih id departemen
+	// Mengambil id departemen
 	$index_dmu = 0;
 	$q = mysqli_query($conn, 'SELECT id_departemen FROM detail_dmu GROUP BY id_departemen');
 	if(mysqli_num_rows($q)>0){
@@ -29,12 +29,12 @@
 		}
 	}
 
-	// Jumlah variabel input
+	// Total variabel input
 	$n_var_input = 0;
 	$q=mysqli_query($conn, 'SELECT COUNT(*) AS total FROM variabel WHERE jenis_variabel="Input"');
 	$d=mysqli_fetch_array($q);
 	$n_var_input=$d['total'];
-	//jumlah variabel output
+	// Total variabel output
 	$n_var_output = 0;
 	$q=mysqli_query($conn, 'SELECT COUNT(*) AS total FROM variabel WHERE jenis_variabel="Output"');
 	$d=mysqli_fetch_array($q);
@@ -121,7 +121,6 @@
 		echo "<br>";*/
 	/* Akhir pembentukan persamaan CCR Model */
 		
-	/*Menampilkan Hasil Efisiensi dan Rekomendasi*/
 		$tabel_ccr = tabel_dual_simplex($dummy_z, $fungsi_kendala, $n_var_input, $n_dmu);
 		/*echo '<br><b>Hasil Penjumlahan Z: </b><br>';
 		print_r($tabel_ccr[0]); echo "<br><br>";
@@ -407,5 +406,5 @@
 		}
 		return $rekomendasi;
 	}
-	header('Location: ../lite/beranda.php?balasan=1');
+	header('Location: ../process/topsis.php');
 ?>

@@ -10,7 +10,12 @@
 			if (mysqli_query($conn, $query)) {
 				$query = 'DELETE FROM perhitungan_efisiensi WHERE id_departemen='.$id.'';
 				if (mysqli_query($conn, $query)) {
-					header('Location: ../lite/lihat_departemen.php?balasan=3');
+					$query = 'DELETE FROM perangkingan WHERE id_departemen='.$id.'';
+					if (mysqli_query($conn, $query)) {
+						header('Location: ../lite/lihat_departemen.php?balasan=3');	
+					} else {
+						header('Location: ../lite/lihat_departemen.php?balasan=4');
+					}
 				} else {
 					header('Location: ../lite/lihat_departemen.php?balasan=4');
 				}

@@ -136,13 +136,13 @@
                                     echo '
                                             </tbody>
                                         </table>
-                                    <button class="btn btn-info" type="button" disabled>Hitung Efisiensi</button>
+                                    <button class="btn btn-info" type="button" disabled>Hitung Efisiensi & Perangkingan</button>
                                     ';
                                 } else {
                                     echo '
                                             </tbody>
                                         </table>
-                                    <a href="../process/simplex.php" class="btn btn-info" type="button">Hitung Efisiensi</a>
+                                    <a href="../process/simplex.php" class="btn btn-info" type="button">Hitung Efisiensi & Perangkingan</a>
                                     ';
                                 }
                                 

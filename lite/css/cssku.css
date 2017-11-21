@@ -18,3 +18,7 @@ th, tr, td{
 .progress-bar-danger {
 	background-color: #D5220F;
 }
+
+#deskripsi {
+	text-align: justify;
+}
