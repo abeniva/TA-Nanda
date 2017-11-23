@@ -17,7 +17,7 @@
             <div class="col-md-5 col-8 align-self-center">
                 <h3 class="text-themecolor m-b-0 m-t-0">Efisiensi</h3>
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="beranda_admin.php">Beranda</a></li>
+                    <li class="breadcrumb-item"><a href="beranda.php">Beranda</a></li>
                     <li class="breadcrumb-item active">Efisiensi</li>
                 </ol>
             </div>
@@ -88,6 +88,7 @@
                                     $k=1;
                                     if (mysqli_num_rows($q) > 0) {
                                         $j=1;$k=1;
+
                                         while ($data = mysqli_fetch_assoc($q)) {
                                             $nama_dep = $data['nama_departemen'];
                                             $var = $data['nama_variabel'];
@@ -95,6 +96,7 @@
                                             $rekomendasi = $data['rekomendasi'];
                                             $satuan = $data['satuan'];
                                             $efisiensi = $data['nilai_efisiensi'];
+                                            $efisiensi = round($data['nilai_efisiensi'], 3);
                                             if ($j==1) {
                                                 echo '
                                                     <tr>

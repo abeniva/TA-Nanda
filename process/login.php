@@ -35,14 +35,10 @@
 					header("location: ../lite/beranda.php");		
 				}
 			} else {
-				//Username tidak terdaftar
-				$_SESSION['error'] = 'Username tidak terdaftar';
+				//Username dan atau password salah
+				$_SESSION['error'] = 'Username atau password salah';
 				header("location: ../lite/index.php");	
-			}
-		} else {
-			//Username dan atau password salah
-			$_SESSION['error'] = 'Username atau password salah';
-			header("location: ../lite/index.php");	
+			} 
 		} 
 	}  else {
 		//Login Gagal

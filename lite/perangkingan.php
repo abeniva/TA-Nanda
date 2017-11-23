@@ -17,7 +17,7 @@
             <div class="col-md-5 col-8 align-self-center">
                 <h3 class="text-themecolor m-b-0 m-t-0">Perangkingan</h3>
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="beranda_admin.php">Beranda</a></li>
+                    <li class="breadcrumb-item"><a href="beranda.php">Beranda</a></li>
                     <li class="breadcrumb-item active">Perangkingan</li>
                 </ol>
             </div>
@@ -48,11 +48,12 @@
                                     $query= mysqli_query($conn,"SELECT d.nama_departemen, p.nilai_perangkingan FROM perangkingan AS p, departemen AS d WHERE d.id_departemen=p.id_departemen ORDER BY p.nilai_perangkingan DESC");
                                     if(mysqli_num_rows($query)>0){
                                         while ($variabel = mysqli_fetch_assoc($query)) {
+                                            $perangkingan = round($variabel['nilai_perangkingan'], 3);
                                             echo '
                                                 <tr>
                                                     <td>'.$i.'</td>
                                                     <td>'.$variabel['nama_departemen'].'</td>
-                                                    <td>'.$variabel['nilai_perangkingan'].'</td>
+                                                    <td>'.$perangkingan.'</td>
                                                 </tr>
                                             ';
                                             $i++;
