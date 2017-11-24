@@ -34,8 +34,8 @@
         <!-- Main wrapper - style you can find in pages.scss -->
         <!-- ============================================================== -->
         <section id="wrapper">
-            <div class="login-register" style="background-color: #eee;">        
-                <div class="login-box pad card">
+            <div class="login-register" style="background-image:url(../assets/images/background/fsm.jpg);">
+                <div class="login-box pad card" style="opacity:0.90;">
                     <div class="card-body">
                         <?php 
                             if (ISSET($_SESSION['error'])) {
