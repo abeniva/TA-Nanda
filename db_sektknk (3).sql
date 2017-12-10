@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 23, 2017 at 03:49 AM
+-- Generation Time: Dec 09, 2017 at 10:55 AM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.21
 
@@ -163,8 +163,8 @@ CREATE TABLE `perangkingan` (
 --
 
 INSERT INTO `perangkingan` (`id_perangkingan`, `id_departemen`, `nilai_perangkingan`) VALUES
-(16, 2, 0.353377),
-(17, 4, 0.646623);
+(22, 2, 0.345399),
+(23, 4, 0.654601);
 
 -- --------------------------------------------------------
 
@@ -186,31 +186,31 @@ CREATE TABLE `perhitungan_efisiensi` (
 --
 
 INSERT INTO `perhitungan_efisiensi` (`id_perhitungan_efisiensi`, `id_departemen`, `id_variabel`, `nilai_efisiensi`, `rekomendasi`, `nilai_awal`) VALUES
-(80, 1, 1, 0.47407362606347, 9, 21),
-(81, 1, 2, 0.47407362606347, 15, 3),
-(82, 1, 12, 0.47407362606347, 4, 3),
-(83, 1, 13, 0.47407362606347, 32, 105),
-(84, 1, 14, 0.47407362606347, 25, 50),
-(85, 2, 1, 1, 18, 18),
-(86, 2, 2, 1, 22, 22),
-(87, 2, 12, 1, 9, 9),
-(88, 2, 13, 1, 65, 65),
-(89, 2, 14, 1, 40, 40),
-(90, 3, 1, 0.52824034873146, 9, 15),
-(91, 3, 2, 0.52824034873146, 11, 8),
-(92, 3, 12, 0.52824034873146, 4, 3),
-(93, 3, 13, 0.52824034873146, 31, 95),
-(94, 3, 14, 0.52824034873146, 20, 20),
-(95, 4, 1, 1, 17, 17),
-(96, 4, 2, 1, 32, 32),
-(97, 4, 12, 1, 6, 6),
-(98, 4, 13, 1, 55, 55),
-(99, 4, 14, 1, 50, 50),
-(100, 5, 1, 0.64797924859844, 11, 13),
-(101, 5, 2, 0.64797924859844, 21, 6),
-(102, 5, 12, 0.64797924859844, 4, 2),
-(103, 5, 13, 0.64797924859844, 36, 101),
-(104, 5, 14, 0.64797924859844, 33, 40);
+(155, 1, 1, 0.47407362606347, 9, 21),
+(156, 1, 2, 0.47407362606347, 15, 3),
+(157, 1, 12, 0.47407362606347, 4, 3),
+(158, 1, 13, 0.47407362606347, 32, 105),
+(159, 1, 14, 0.47407362606347, 25, 50),
+(160, 2, 1, 1, 18, 18),
+(161, 2, 2, 1, 22, 22),
+(162, 2, 12, 1, 9, 9),
+(163, 2, 13, 1, 65, 65),
+(164, 2, 14, 1, 40, 40),
+(165, 3, 1, 0.52824034873146, 9, 15),
+(166, 3, 2, 0.52824034873146, 11, 8),
+(167, 3, 12, 0.52824034873146, 4, 3),
+(168, 3, 13, 0.52824034873146, 31, 95),
+(169, 3, 14, 0.52824034873146, 20, 20),
+(170, 4, 1, 1, 17, 17),
+(171, 4, 2, 1, 32, 32),
+(172, 4, 12, 1, 6, 6),
+(173, 4, 13, 1, 55, 55),
+(174, 4, 14, 1, 50, 50),
+(175, 5, 1, 0.64797924859844, 11, 13),
+(176, 5, 2, 0.64797924859844, 21, 6),
+(177, 5, 12, 0.64797924859844, 4, 2),
+(178, 5, 13, 0.64797924859844, 36, 101),
+(179, 5, 14, 0.64797924859844, 33, 40);
 
 -- --------------------------------------------------------
 
@@ -231,14 +231,14 @@ CREATE TABLE `variabel` (
 --
 
 INSERT INTO `variabel` (`id_variabel`, `nama_variabel`, `jenis_variabel`, `satuan`, `bobot`) VALUES
-(1, 'Jumlah Dosen S2', 'Input', 'orang', 3),
+(1, 'Jumlah Dosen S2', 'Input', 'orang', 4),
 (2, 'Jumlah Dosen S3', 'Input', 'orang', 5),
 (10, 'Jumlah Bahan Ajar', 'Output', 'bahan ajar', 5),
-(11, 'Jumlah Penelitian di Danai', 'Output', 'juta', 4),
+(11, 'Jumlah Penelitian di Danai', 'Output', 'juta', 5),
 (12, 'Jumlah Tenaga Kependidikan', 'Input', 'orang', 2),
 (13, 'Alokasi Dana Penelitian', 'Input', 'juta', 3),
 (14, 'Alokasi Dana Pengabdian', 'Input', 'juta', 3),
-(15, 'Jumlah Pengabdian di Danai', 'Output', 'juta', 4);
+(15, 'Jumlah Pengabdian di Danai', 'Output', 'juta', 5);
 
 --
 -- Indexes for dumped tables
@@ -314,12 +314,12 @@ ALTER TABLE `pengguna_khusus`
 -- AUTO_INCREMENT for table `perangkingan`
 --
 ALTER TABLE `perangkingan`
-  MODIFY `id_perangkingan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id_perangkingan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 --
 -- AUTO_INCREMENT for table `perhitungan_efisiensi`
 --
 ALTER TABLE `perhitungan_efisiensi`
-  MODIFY `id_perhitungan_efisiensi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=105;
+  MODIFY `id_perhitungan_efisiensi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=180;
 --
 -- AUTO_INCREMENT for table `variabel`
 --

@@ -62,7 +62,7 @@
                                                 </tbody>
                                                 </table>
                                             </div>
-                                            <p><b>Catatan: Perangkingan berdasarkan perhitungan TOPSIS karena nilai efisiensi > 1</b></p>
+                                            <p><b>Catatan: Perangkingan berdasarkan perhitungan TOPSIS karena nilai efisiensi = 1 terdapat lebih dari 1 DMU</b></p>
                                         ';
                                     } else {
                                         echo '

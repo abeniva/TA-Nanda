@@ -180,8 +180,7 @@
                                         $d = mysqli_fetch_assoc($q);
                                         $nama_departemen = $d['nama_departemen'];
                                         $efisiensi = round($d['nilai_efisiensi'], 3);
-                                        # Menampilkan Efisiensi dan Tabel Rekomendasi
-                                        $persen = $efisiensi * 100;
+                                        # Menampilkan Efisiensi dan Tabel Rekomendasi$persen = $efisiensi * 1;
                                         if ($efisiensi >= 0.9) {
                                                 $alert = "alert-success";
                                                 $progress = "progress-bar-success";
@@ -192,23 +191,14 @@
                                             echo '
                                                     <div class="col-sm-5">
                                                         <div class="alert alert-dismissible '.$alert.'">
-                                                                <div class="row">
-                                                                    <div class="col-sm-9 col-xs-9">
-                                                                        <h4 align="left"><strong>'.$nama_departemen.'</strong></h4>
-                                                                    </div>
-                                                                    <div class="col-sm-3 col-xs-3">
-                                                                        <h4 align="right"><strong>'.$efisiensi.'</strong></h4>
-                                                                    </div>
+                                                            <div class="row">
+                                                                <div class="col-sm-9 col-xs-9">
+                                                                    <h4 align="left"><strong>'.$nama_departemen.'</strong></h4>
                                                                 </div>
-                                                                <br>
-                                                                <div class="row">
-                                                                    <div class="col-sm-12">
-                                                                        <div class="progress">
-                                                                            <div class="progress-bar '.$progress.'" role="progressbar" aria-valuenow="'.$persen.'" aria-valuemin="0" aria-valuemax="100" style="width:'.$persen.'%">'.$persen.'%
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
+                                                                <div class="col-sm-3 col-xs-3">
+                                                                    <h4 align="right"><strong>'.$efisiensi.'</strong></h4>
                                                                 </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                             ';
